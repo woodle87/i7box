@@ -301,13 +301,16 @@
     i("loader"))
       , c = i("slideshow")
       , l = i("slideshow-top")
-      , d = document.createElement("img");
-    d.id = "thumbnail",
-    d.alt = r.a.title,
-    d.title = r.a.title;
-    var u = r.a.thumbnail;
-    u.startsWith("https://img.poki-cdn.com/") && (u = "https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=40,height=40,fit=cover,g=0.5x0.5,f=auto/".concat(u.substr(21))),
-    d.src = u;
+// Custom loader screen
+var d = document.createElement("div");
+d.id = "custom-loader";
+d.innerHTML = `
+  <div id="loader-bg">
+    <img src="loading.png" id="loader-img" />
+    <div id="loader-spinner">C</div>
+  </div>
+`;
+
     var f = i("slideshow-top-container")
       , h = i("game-title");
     h.innerText = r.a.title;
