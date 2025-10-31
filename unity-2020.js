@@ -720,7 +720,7 @@ d.innerHTML = `
         g && clearTimeout(g))
     }
     function s() {
-        var n = w.a.loadingComments || ["Loading..."];
+        var n = w.a.loadingComments || ["Loading"];
         n ? (p.innerHTML = n[y],
         y++,
         y >= n.length && (y = 0),
